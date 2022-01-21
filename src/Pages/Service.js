@@ -1,12 +1,11 @@
-import Navbar from "../Components/Header/Navbar";
+import Navbar from "../Components/Navbar";
 import Container from "../Components/Container";
 function Service() {
   return (
     <div>
-      <Container>
-        <Navbar />
-        Service
-      </Container>
+      {" "}
+      <Navbar />
+      <Container>Service</Container>
     </div>
   );
 }

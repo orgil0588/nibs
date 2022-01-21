@@ -6,7 +6,7 @@ function Compare() {
   const [drop, setDrop] = useState(false);
   const [drop2, setDrop2] = useState(false);
   const [index, setIndex] = useState(0);
-  const [index2, setIndex2] = useState(0);
+  const [index2, setIndex2] = useState(1);
   console.log(index);
 
   return (
@@ -27,7 +27,7 @@ function Compare() {
               return (
                 <li
                   onClick={() => setIndex(i)}
-                  className={`text-left my-2 ${
+                  className={`text-left my-2 text-gray-400 ${
                     drop === false ? `hidden` : `block`
                   } `}
                   key={i}
@@ -43,11 +43,9 @@ function Compare() {
           className="text-white border border-white rounded-xl backdrop-filter backdrop-blur-lg  py-2 px-6 absolute right-60 "
         >
           <div
-            style={
-              ({ scrollbarWidth: "10px" }, { scrollbarTrackColor: "#f1f1f1" })
-            }
+            style={{ scrollbarWidth: "none" }}
             className={`${
-              drop2 ? `h-40 overflow-hidden overflow-y-scroll` : "  "
+              drop2 ? `h-40 overflow-hidden overflow-y-scroll ` : "  "
             }`}
           >
             {data[index2].text}
@@ -55,7 +53,7 @@ function Compare() {
               return (
                 <li
                   onClick={() => setIndex2(i)}
-                  className={` my-2 text-left ${
+                  className={` my-2 text-left text-gray-400 ${
                     drop2 === false ? `hidden` : `block`
                   } `}
                   key={i}
@@ -69,74 +67,74 @@ function Compare() {
       </div>
 
       <Chart index={index} index2={index2} />
-      <div className="mt-12 w-8/12 mx-auto">
-        <div className="flex justify-between mt-4 text-white">
+      <div className="mt-12  mx-auto ">
+        <div className="flex justify-between items-center mt-4 text-white">
           {
             <p className="px-4 py-1  bg-blue-500 bg-opacity-30 text-blue-500 font-semibold rounded-lg">
-              {data[index].daatgaliinHuraamj}
+              {data[index].daatgaliinHuraamj + " тэрбум"}
             </p>
           }
           <div className=" rounded-md mr-4"> Даатгалын хураамж </div>
 
           {
             <p className="px-4 py-1  bg-blue-500 bg-opacity-30 text-blue-500 font-semibold rounded-lg">
-              {data[index2].daatgaliinHuraamj}
+              {data[index2].daatgaliinHuraamj + " тэрбум"}
             </p>
           }
         </div>
-        <div className="flex justify-between mt-4 text-white">
+        <div className="flex justify-between items-center mt-4 text-white">
           {
             <p className="px-4 py-1  bg-indigo-500 bg-opacity-30 text-indigo-500 font-semibold rounded-lg">
-              {data[index].nohonTolbor}
+              {data[index].nohonTolbor + " тэрбум"}
             </p>
           }
           <div className=" rounded-md mr-4"> Нөхөн төлбөр </div>
 
           {
             <p className="px-4 py-1  bg-indigo-500 bg-opacity-30 text-indigo-500 font-semibold rounded-lg">
-              {data[index2].nohonTolbor}
+              {data[index2].nohonTolbor + " тэрбум"}
             </p>
           }
         </div>
-        <div className="flex justify-between mt-4 text-white">
+        <div className="flex justify-between items-center mt-4 text-white">
           {
             <p className="px-4 py-1  bg-purple-500 bg-opacity-30 text-purple-400 font-semibold rounded-lg">
-              {data[index].niitHorongo}
+              {data[index].niitHorongo + " тэрбум"}
             </p>
           }
           <div className=" rounded-md mr-4"> Нийт хөрөнгө </div>
 
           {
             <p className="px-4 py-1  bg-purple-500 bg-opacity-30 text-purple-400 font-semibold rounded-lg">
-              {data[index2].niitHorongo}
+              {data[index2].niitHorongo + " тэрбум"}
             </p>
           }
         </div>
-        <div className="flex justify-between mt-4 text-white">
+        <div className="flex justify-between items-center mt-4 text-white">
           {
             <p className="px-4 py-1  bg-pink-400 bg-opacity-30 text-pink-400 font-semibold rounded-lg">
-              {data[index].tseverAshig}
+              {data[index].tseverAshig + " тэрбум"}
             </p>
           }
           <div className=" rounded-md mr-4"> Цэвэр ашиг </div>
 
           {
             <p className="px-4 py-1  bg-pink-400 bg-opacity-30 text-pink-400 font-semibold rounded-lg">
-              {data[index2].tseverAshig}
+              {data[index2].tseverAshig + " тэрбум"}
             </p>
           }
         </div>
-        <div className="flex justify-between mt-4 text-white">
+        <div className="flex justify-between items-center mt-4 text-white">
           {
             <p className="px-4 py-1  bg-pink-300 bg-opacity-30 text-pink-300 font-semibold rounded-lg">
-              {data[index].NootsSan}
+              {data[index].NootsSan + " тэрбум"}
             </p>
           }
           <div className=" rounded-md mr-4"> Нөөц сан </div>
 
           {
             <p className="px-4 py-1  bg-pink-300 bg-opacity-30 text-pink-300 font-semibold rounded-lg">
-              {data[index2].NootsSan}
+              {data[index2].NootsSan + " тэрбум"}
             </p>
           }
         </div>

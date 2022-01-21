@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Autoplay, EffectFade } from "swiper";
+import { EffectFade } from "swiper";
 import "swiper/swiper-bundle.min.css";
-import Navbar from "../Components/Header/Navbar";
 
 import Container from "../Components/Container";
 
@@ -18,7 +17,7 @@ function Statistic() {
     if (window.innerWidth > 768) {
       return 4;
     } else {
-      return 3;
+      return 2;
     }
   }
 
@@ -45,12 +44,10 @@ function Statistic() {
                   >
                     <img
                       className={`cursor-pointer ${
-                        index === i ? `opacity-100` : `opacity-50`
+                        index === i ? `opacity-100` : `opacity-20`
                       }`}
                       src={e.img}
                     />
-
-                    <p className="text-center">{e.text}</p>
                   </div>
                 </SwiperSlide>
               );
@@ -64,7 +61,7 @@ function Statistic() {
                   </div>
                   {
                     <p className="px-4 py-1 bg-blue-500 bg-opacity-30 text-blue-500 font-semibold rounded-lg">
-                      {data[index].daatgaliinHuraamj}
+                      {data[index].daatgaliinHuraamj + " тэрбум"}
                     </p>
                   }
                 </div>
@@ -75,7 +72,7 @@ function Statistic() {
                   </div>
                   {
                     <p className="px-4 py-1 bg-indigo-500 bg-opacity-30 text-indigo-500 font-semibold rounded-lg">
-                      {data[index].nohonTolbor}
+                      {data[index].nohonTolbor + " тэрбум"}
                     </p>
                   }
                 </div>
@@ -86,7 +83,7 @@ function Statistic() {
                   </div>
                   {
                     <p className="px-4 py-1 bg-purple-500 bg-opacity-30 text-purple-400 font-semibold rounded-lg">
-                      {data[index].niitHorongo}
+                      {data[index].niitHorongo + " тэрбум"}
                     </p>
                   }
                 </div>
@@ -97,7 +94,7 @@ function Statistic() {
                   </div>
                   {
                     <p className="px-4 py-1 bg-pink-400  bg-opacity-30 text-pink-400 font-semibold rounded-lg">
-                      {data[index].tseverAshig}
+                      {data[index].tseverAshig + " тэрбум"}
                     </p>
                   }
                 </div>
@@ -108,7 +105,7 @@ function Statistic() {
                   </div>
                   {
                     <p className="px-4 py-1 bg-pink-300 bg-opacity-30 text-pink-300 font-semibold rounded-lg">
-                      {data[index].NootsSan}
+                      {data[index].NootsSan + " тэрбум"}
                     </p>
                   }
                 </div>

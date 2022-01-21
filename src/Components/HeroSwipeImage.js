@@ -42,7 +42,7 @@ const HeroSwipeImage = (props) => {
 
   SwiperCore.use([Autoplay]);
   return (
-    <div className="text-white flex">
+    <div className="text-white flex items-center justify-center">
       <Swiper
         modules={[EffectFade]}
         effect="fade"
@@ -54,7 +54,7 @@ const HeroSwipeImage = (props) => {
         {logos.map((el) => {
           return (
             <SwiperSlide>
-              <img src={el} />
+              <img className="w-full" src={el} />
             </SwiperSlide>
           );
         })}

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Container from "../Container";
-import Logo from "../../assets/logo-xs.png";
-import Burger from "../../assets/menu.svg";
-import Cancel from "../../assets/cancel.svg";
+import Container from "./Container";
+import Logo from "../assets/logo-xs.png";
+import Burger from "../assets/menu.png";
+import Cancel from "../assets/cancel.png";
 
 function Navbar() {
   let [isOpen, setIsOpen] = useState(false);
@@ -16,6 +16,7 @@ function Navbar() {
       >
         <div className={`${isOpen ? `hidden` : `flex`}`}>
           <img src={Logo} />
+
           {/* <p className="ml-4 font-semibold hidden lg:block">
             National Insurance <br /> Brokerage Services
           </p> */}
@@ -26,12 +27,12 @@ function Navbar() {
             setIsOpen(!isOpen);
             console.log(!isOpen);
           }}
-          className="cursor-pointer absolute top-7  right-12 lg:hidden"
+          className="cursor-pointer absolute top-6 right-12 lg:hidden"
         >
           {!isOpen ? (
-            <i className="fi fi-rr-menu-burger text-3xl"></i>
+            <img className="w-10 bg-white p-2 " src={Burger} />
           ) : (
-            <i className="fi fi-rr-cross text-2xl"></i>
+            <img className="w-10 bg-white p-2" src={Cancel} />
           )}
         </div>
         <div
@@ -63,7 +64,7 @@ function Navbar() {
         >
           <Link
             className="px-4 py-2 text-baseline font-regular bg-blue-500 hover:bg-blue-700 rounded-lg"
-            to="/"
+            to="/onlineInsurance"
           >
             Цахим даатгал
           </Link>

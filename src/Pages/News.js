@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import data from "../fakejson/news.json";
 import Container from "../Components/Container";
-import Navbar from "../Components/Header/Navbar";
+import Navbar from "../Components/Navbar";
 import NewsItems from "../Components/NewsItems";
 // import img from "../assets/Hero-xs.png";
 function News() {

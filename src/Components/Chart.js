@@ -23,49 +23,49 @@ function Chart(props) {
 
   console.log(dt, nt, nh, ta, ns);
   return (
-    <div className="flex w-10/12 mx-auto h-60 justify-evenly" ref={ref}>
+    <div className="flex  mx-auto h-60 justify-evenly" ref={ref}>
       <div className="flex items-end">
         <div
-          className={`bg-blue-500 w-4 mx-4`}
-          style={{ height: `${(offset / 100) * dt}px` }}
+          className={`bg-blue-500 w-8 mx-1`}
+          style={{ height: `${(offset / 100) * dt * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-500 w-4 mx-4"
-          style={{ height: `${(offset / 100) * nt}px` }}
+          className="bg-indigo-500 w-8 mx-1"
+          style={{ height: `${(offset / 100) * nt * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-600 w-4 mx-4"
-          style={{ height: `${(offset / 100) * nh}px` }}
+          className="bg-purple-500 w-8 mx-1"
+          style={{ height: `${(offset / 100) * nh * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-700 w-4 mx-4"
-          style={{ height: `${(offset / 100) * ta}px` }}
+          className="bg-pink-400 w-8 mx-1"
+          style={{ height: `${(offset / 100) * ta * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-900 w-4 mx-4"
-          style={{ height: `${(offset / 100) * ns}px` }}
+          className="bg-pink-300 w-8 mx-1"
+          style={{ height: `${(offset / 100) * ns * 1.7}px` }}
         ></div>
       </div>
       <div className="flex items-end">
         <div
-          className={`bg-blue-500 w-4 mx-4`}
-          style={{ height: `${(offset / 100) * dt2}px` }}
+          className={`bg-blue-500 w-8 mx-1`}
+          style={{ height: `${(offset / 100) * dt2 * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-500 w-4 mx-4"
-          style={{ height: `${(offset / 100) * nt2}px` }}
+          className="bg-indigo-500 w-8 mx-1"
+          style={{ height: `${(offset / 100) * nt2 * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-600 w-4 mx-4"
-          style={{ height: `${(offset / 100) * nh2}px` }}
+          className="bg-purple-600 w-8 mx-1"
+          style={{ height: `${(offset / 100) * nh2 * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-700 w-4 mx-4"
-          style={{ height: `${(offset / 100) * ta2}px` }}
+          className="bg-pink-400 w-8 mx-1"
+          style={{ height: `${(offset / 100) * ta2 * 1.7}px` }}
         ></div>
         <div
-          className="bg-blue-900 w-4 mx-4"
-          style={{ height: `${(offset / 100) * ns2}px` }}
+          className="bg-pink-300 w-8 mx-1"
+          style={{ height: `${(offset / 100) * ns2 * 1.7}px` }}
         ></div>
       </div>
     </div>

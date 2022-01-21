@@ -3,15 +3,16 @@ import React, { useState } from "react";
 function Faqs(props) {
   const [show, setShow] = useState(false);
   return (
-    <div className="text-white md:w-8/12 mx-4 md:mx-auto ">
+    <div className="text-blue-500 font-semibold  md:w-8/12 mx-4 md:mx-auto ">
       <div
         onClick={() => setShow(!show)}
-        className="flex cursor-pointer bg-blue-500 px-6  rounded-lg items-center my-4 "
+        className="flex cursor-pointer bg-blue-800 bg-opacity-30 px-6  rounded-lg items-center my-4 "
       >
         {show ? (
-          <i class="fi fi-rr-minus-small text-xl mr-4 mt-2"></i>
+          
+          <div className="text-xl mr-4 my-2">-</div>
         ) : (
-          <i class="fi fi-rr-add text-xl mr-4 mt-2"></i>
+          <div className="text-xl mr-4 my-2">+</div>
         )}
 
         <p> {props.question}</p>

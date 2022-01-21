@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Header/Navbar";
+import Navbar from "../Components/Navbar";
 import Statistic from "../Components/Statisctic";
 import Container from "../Components/Container";
 import Compare from "../Components/Compare";
@@ -10,7 +10,7 @@ function InsuranceCompare() {
     <div>
       <Navbar />
       <Container>
-        <div className="flex justify-between my-12">
+        <div className="flex justify-between my-12  ">
           <button
             className={`py-2 px-4 rounded-lg ${
               showComp === 0
@@ -22,7 +22,7 @@ function InsuranceCompare() {
             Даатгалын статистик
           </button>
           <button
-            className={`py-2 px-4 rounded-lg ${
+            className={`py-2 px-4 rounded-lg mr-4 ${
               showComp === 1
                 ? `bg-blue-500 text-white`
                 : "bg-transparent border border-blue-500 text-blue-500"

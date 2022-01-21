@@ -12,6 +12,7 @@ import About from "./Pages/About";
 import Service from "./Pages/Service";
 import News from "./Pages/News";
 import InsuranceCompare from "./Pages/InsuranceCompare";
+import OnlineInsurance from "./Pages/OnlineInsurance";
 ReactDOM.render(
   <React.StrictMode>
     <Router>
@@ -21,6 +22,7 @@ ReactDOM.render(
         <Route exact path="/service" component={Service} />
         <Route exact path="/news" component={News} />
         <Route exact path="/InsuranceCompare" component={InsuranceCompare} />
+        <Route exact path="/onlineInsurance" component={OnlineInsurance} />
       </Switch>
     </Router>
   </React.StrictMode>,

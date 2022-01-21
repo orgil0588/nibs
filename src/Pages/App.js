@@ -1,4 +1,4 @@
-import Navbar from "../Components/Header/Navbar";
+import Navbar from "../Components/Navbar";
 import Container from "../Components/Container";
 import HeroImgXs from "../assets/Hero-xs.png";
 import HeroImgMd from "../assets/hero-md.png";
