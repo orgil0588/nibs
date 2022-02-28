@@ -5,7 +5,7 @@ import Phone from "../assets/phone.png";
 import Location from "../assets/location.png";
 function ContactInfo() {
   return (
-    <div className="flex flex-col md:w-8/12 mx-auto   justify-around text-white md:flex-row">
+    <div className="flex flex-col pb-20 pt-10 md:w-8/12 mx-auto   justify-around text-white md:flex-row">
       <div className="md:w-6/12">
         <div className="flex items-center mt-4">
           <img className="mx-4" src={Facebook} alt="fb" />
@@ -14,7 +14,7 @@ function ContactInfo() {
           </p>
         </div>
         <div className="flex items-center mt-4">
-          <img className="mx-4" src={Mail}  alt="mail"/>
+          <img className="mx-4" src={Mail} alt="mail" />
           <p>
             <a href="/">contact@nibs.mn</a>
           </p>
