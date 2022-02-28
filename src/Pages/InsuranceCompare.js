@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar";
 import Statistic from "../Components/Statisctic";
 import Container from "../Components/Container";
 import Compare from "../Components/Compare";
@@ -8,7 +7,7 @@ function InsuranceCompare() {
 
   return (
     <div>
-      <Navbar />
+
       <Container>
         <div className="flex justify-between my-12  ">
           <button

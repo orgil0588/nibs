@@ -15,7 +15,7 @@ function Navbar() {
         } `}
       >
         <div className={`${isOpen ? `hidden` : `flex`}`}>
-          <img src={Logo} />
+          <img src={Logo} alt="images" />
 
           {/* <p className="ml-4 font-semibold hidden lg:block">
             National Insurance <br /> Brokerage Services
@@ -25,20 +25,19 @@ function Navbar() {
         <div
           onClick={() => {
             setIsOpen(!isOpen);
-            console.log(!isOpen);
           }}
-          className="cursor-pointer absolute top-6 right-12 lg:hidden"
+          className="cursor-pointer absolute top-6 right-2 lg:hidden"
         >
           {!isOpen ? (
-            <img className="w-10 bg-white p-2 " src={Burger} />
+            <img className="w-10 rounded p-2 " src={Burger} alt="images" />
           ) : (
-            <img className="w-10 bg-white p-2" src={Cancel} />
+            <img className="w-10 rounded p-2" src={Cancel} alt="images" />
           )}
         </div>
         <div
           className={`${
             isOpen
-              ? `block flex flex-col w-full h-full mx-auto items-start mt-24`
+              ? ` flex flex-col w-full h-full mx-auto items-start mt-24`
               : "hidden"
           } lg:block`}
         >
@@ -48,17 +47,17 @@ function Navbar() {
           <Link className="p-4 text-baseline font-regular" to="/about">
             Бидний тухай
           </Link>
-          <Link className="p-4 text-baseline font-regular" to="/service">
+          {/* <Link className="p-4 text-baseline font-regular" to="/service">
             Үйлчилгээ
-          </Link>
-          <Link className="p-4 text-baseline font-regular" to="/service">
+          </Link> */}
+          <Link className="p-4 text-baseline font-regular" to="/contact">
             Холбоо барих
           </Link>
         </div>
         <div
           className={`${
             isOpen
-              ? `block flex flex-col  w-full  mx-auto items-start justify-between mt-10  `
+              ? ` flex flex-col  w-full  mx-auto items-start justify-between mt-10  `
               : "hidden"
           } lg:block`}
         >

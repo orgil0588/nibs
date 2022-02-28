@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectFade } from "swiper";
 import "swiper/swiper-bundle.min.css";
@@ -7,11 +7,7 @@ import Container from "../Components/Container";
 
 import data from "../fakejson/compare.json";
 function Statistic() {
-  const [exact, setExact] = useState({
-    active: {
-      backgroundColor: "red",
-    },
-  });
+  
   const [index, setIndex] = useState(0);
   function resize() {
     if (window.innerWidth > 768) {
@@ -46,6 +42,7 @@ function Statistic() {
                       className={`cursor-pointer ${
                         index === i ? `opacity-100` : `opacity-20`
                       }`}
+                      alt="images"
                       src={e.img}
                     />
                   </div>

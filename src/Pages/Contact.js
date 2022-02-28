@@ -3,9 +3,9 @@ import Facebook from "../assets/fb.png";
 import Mail from "../assets/mail.png";
 import Phone from "../assets/phone.png";
 import Location from "../assets/location.png";
-function ContactInfo() {
+function Contact() {
   return (
-    <div className="flex flex-col md:w-8/12 mx-auto   justify-around text-white md:flex-row">
+    <div className=" mt-10 flex flex-col md:w-8/12 mx-auto   justify-around text-white md:flex-row">
       <div className="md:w-6/12">
         <div className="flex items-center mt-4">
           <img className="mx-4" src={Facebook} alt="fb" />
@@ -14,7 +14,7 @@ function ContactInfo() {
           </p>
         </div>
         <div className="flex items-center mt-4">
-          <img className="mx-4" src={Mail}  alt="mail"/>
+          <img className="mx-4" src={Mail} alt="mail" />
           <p>
             <a href="/">contact@nibs.mn</a>
           </p>
@@ -43,4 +43,4 @@ function ContactInfo() {
 // <img src={Mail} />
 // <img src={Phone} />
 // <img src={Location} />
-export default ContactInfo;
+export default Contact;

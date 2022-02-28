@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Navbar from "../Components/Navbar";
 import axios from "axios";
 import Container from "../Components/Container";
 import Button from "../Components/Button";
@@ -7,7 +6,7 @@ function OnlineInsurance() {
   const [registerWeb, setRegisterWeb] = useState(null);
   const [stateNumberWeb, setStateNumberWeb] = useState(null);
   const [error, setError] = useState(null);
-
+  const [checkInsurace, setCheckInsurance] = useState("");
   const submitHandler = (e) => {
     e.preventDefault();
 
@@ -33,39 +32,48 @@ function OnlineInsurance() {
       )
 
       .then((result) =>
-        console.log(result.data.failureMessages.message[0].failureMessage)
+        setCheckInsurance(result.data.failureMessages.message[0].failureMessage)
       )
       .catch((err) => console.log(err));
   };
 
   return (
     <div>
-      <Navbar />
       <Container>
         {error && <div className="mx-4 text-red-400">{error}</div>}
-        <form className="flex flex-col text-white mx-4">
-          <label>Регистрийн дугаар</label>
-          <input
-            className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600  "
-            type="text"
-            onChange={(e) => {
-              setRegisterWeb(e.target.value.trim());
-              setError(null);
-            }}
-          />
-          <label>Тээврийн хэрэгслийн улсын дугаар</label>
-          <input
-            className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600  "
-            type="text"
-            onChange={(e) => {
-              setStateNumberWeb(e.target.value.trim());
-              setError(null);
-            }}
-          />
-          <div className="" onClick={submitHandler}>
-            <Button color="blue-600" hover="bg-blue-800" text="Үргэлжлүүлэх" />
+        {checkInsurace !== "" ? (
+          <div className="text-center mt-10 text-gray-100 font-bold">
+            {checkInsurace}
           </div>
-        </form>
+        ) : (
+          <form className="flex flex-col mt-10 text-white mx-4 md:w-8/12 md:mx-auto ">
+            <label className="mt-4">Регистрийн дугаар</label>
+            <input
+              className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600  "
+              type="text"
+              onChange={(e) => {
+                setRegisterWeb(e.target.value.trim());
+                setError(null);
+              }}
+            />
+            <label className="mt-4">Тээврийн хэрэгслийн улсын дугаар</label>
+            <input
+              className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600  "
+              type="text"
+              onChange={(e) => {
+                setStateNumberWeb(e.target.value.trim());
+                setError(null);
+              }}
+            />
+            <div className="mt-4" onClick={submitHandler}>
+              <Button
+                color="blue-600"
+                hover="bg-blue-800"
+                text="Үргэлжлүүлэх"
+              />
+            </div>
+          </form>
+        )}
       </Container>
     </div>
   );

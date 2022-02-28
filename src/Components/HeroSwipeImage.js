@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import "swiper/swiper-bundle.min.css";
@@ -8,7 +8,6 @@ import bodi from "../assets/logos/bodi.png";
 import ganzam from "../assets/logos/ganzam.png";
 import mandal from "../assets/logos/mandal.png";
 import mig from "../assets/logos/mig.png";
-import mongol from "../assets/logos/mongol.png";
 import monre from "../assets/logos/monre.png";
 import munkh from "../assets/logos/munkh.png";
 import nomin from "../assets/logos/nomin.png";
@@ -16,8 +15,7 @@ import practical from "../assets/logos/practical.png";
 import tenger from "../assets/logos/tenger.png";
 import ulaanbaatar from "../assets/logos/ulaanbaatar.png";
 
-const HeroSwipeImage = (props) => {
-  const [windowSize, setWindowSize] = useState();
+const HeroSwipeImage = () => {
   function resize() {
     if (window.innerWidth > 768) {
       return 4;
@@ -53,8 +51,8 @@ const HeroSwipeImage = (props) => {
       >
         {logos.map((el) => {
           return (
-            <SwiperSlide>
-              <img className="w-full" src={el} />
+            <SwiperSlide key={el}>
+              <img className="w-full" src={el} alt="logos" />
             </SwiperSlide>
           );
         })}

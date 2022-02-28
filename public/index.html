@@ -10,8 +10,7 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -26,11 +25,16 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>National Insurance Brokerage Service</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <!-- Messenger Chat plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -43,3 +47,31 @@
     -->
   </body>
 </html>
+
+<!-- Messenger Chat plugin Code -->
+
+<script>
+  var chatbox = document.getElementById("fb-customer-chat");
+  chatbox.setAttribute("page_id", "105016501928541");
+  chatbox.setAttribute("attribution", "biz_inbox");
+</script>
+
+<!-- Your SDK code -->
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      xfbml: true,
+      version: "v13.0",
+    });
+  };
+
+  (function (d, s, id) {
+    var js,
+      fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, "script", "facebook-jssdk");
+</script>
