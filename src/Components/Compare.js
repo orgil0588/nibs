@@ -7,7 +7,7 @@ function Compare() {
   const [drop2, setDrop2] = useState(false);
   const [index, setIndex] = useState(0);
   const [index2, setIndex2] = useState(1);
-  console.log(index);
+
 
   return (
     <Container>
@@ -21,7 +21,7 @@ function Compare() {
               drop ? `h-40 overflow-hidden overflow-y-scroll` : ""
             }`}
           >
-            {console.log(drop)}
+        
             {data[index].text}
             {data.map((e, i) => {
               return (

@@ -13,28 +13,40 @@ function OnlineInsurance() {
     const secretKey = btoa(
       `${process.env.REACT_APP_BASIC_AUTH_USERNAME}:${process.env.REACT_APP_BASIC_AUTH_PASSWORD}`
     );
-    console.log(secretKey);
-    axios
-      .post(
-        `${process.env.REACT_APP_REST_API}/check_insurance`,
 
-        new URLSearchParams({
-          register: registerWeb,
-          stateNumber: stateNumberWeb,
-        }),
-        {
-          headers: {
-            "Content-type": "application/x-www-form-urlencoded",
+    if (registerWeb === null || stateNumberWeb === null) {
+      setError("РД эсвэл автомашины улсын дугаараа зөв оруулна уу");
+      setRegisterWeb("");
+      setStateNumberWeb("");
+    } else if (registerWeb.length !== 8 || stateNumberWeb.length !== 7) {
+      setError("РД эсвэл автомашины улсын дугаараа зөв оруулна уу");
+      setRegisterWeb("");
+      setStateNumberWeb("");
+    } else {
+      axios
+        .post(
+          `${process.env.REACT_APP_REST_API}/check_insurance`,
 
-            Authorization: `Basic ${secretKey}`,
-          },
-        }
-      )
+          new URLSearchParams({
+            register: registerWeb,
+            stateNumber: stateNumberWeb,
+          }),
+          {
+            headers: {
+              "Content-type": "application/x-www-form-urlencoded",
 
-      .then((result) =>
-        setCheckInsurance(result.data.failureMessages.message[0].failureMessage)
-      )
-      .catch((err) => console.log(err));
+              Authorization: `Basic ${secretKey}`,
+            },
+          }
+        )
+
+        .then((result) =>
+          setCheckInsurance(
+            result.data.failureMessages.message[0].failureMessage
+          )
+        )
+        .catch((err) => console.log(err));
+    }
   };
 
   return (
@@ -49,7 +61,8 @@ function OnlineInsurance() {
           <form className="flex flex-col mt-10 text-white mx-4 md:w-8/12 md:mx-auto ">
             <label className="mt-4">Регистрийн дугаар</label>
             <input
-              className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600  "
+              placeholder="РД12345678"
+              className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600 placeholder-gray-600 "
               type="text"
               onChange={(e) => {
                 setRegisterWeb(e.target.value.trim());
@@ -58,7 +71,8 @@ function OnlineInsurance() {
             />
             <label className="mt-4">Тээврийн хэрэгслийн улсын дугаар</label>
             <input
-              className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600  "
+              placeholder="1234УУД"
+              className="p-2 bg-transparent border border-gray-800 rounded-lg text-gray-600 placeholder-gray-600 "
               type="text"
               onChange={(e) => {
                 setStateNumberWeb(e.target.value.trim());

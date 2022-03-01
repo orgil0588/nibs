@@ -3,6 +3,8 @@ import Facebook from "../assets/fb.png";
 import Mail from "../assets/mail.png";
 import Phone from "../assets/phone.png";
 import Location from "../assets/location.png";
+import MyMapComponent from "./Map";
+
 function ContactInfo() {
   return (
     <div className="flex flex-col pb-20 pt-10 md:w-8/12 mx-auto   justify-around text-white md:flex-row">
@@ -13,6 +15,7 @@ function ContactInfo() {
             <a href="/">National Insurances Brokerage Services</a>
           </p>
         </div>
+
         <div className="flex items-center mt-4">
           <img className="mx-4" src={Mail} alt="mail" />
           <p>
@@ -43,4 +46,5 @@ function ContactInfo() {
 // <img src={Mail} />
 // <img src={Phone} />
 // <img src={Location} />
+
 export default ContactInfo;

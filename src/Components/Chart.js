@@ -21,7 +21,7 @@ function Chart(props) {
   let ta2 = data[index2].tseverAshig;
   let ns2 = data[index2].NootsSan;
 
-  console.log(dt, nt, nh, ta, ns);
+
   return (
     <div className="flex  mx-auto h-60 justify-evenly" ref={ref}>
       <div className="flex items-end">

@@ -3,17 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, EffectFade } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import amar from "../assets/logos/amar.png";
-import ard from "../assets/logos/ard.png";
 import bodi from "../assets/logos/bodi.png";
-import ganzam from "../assets/logos/ganzam.png";
 import mandal from "../assets/logos/mandal.png";
-import mig from "../assets/logos/mig.png";
-import monre from "../assets/logos/monre.png";
-import munkh from "../assets/logos/munkh.png";
-import nomin from "../assets/logos/nomin.png";
+import mongol from "../assets/logos/mongol.png";
 import practical from "../assets/logos/practical.png";
-import tenger from "../assets/logos/tenger.png";
-import ulaanbaatar from "../assets/logos/ulaanbaatar.png";
+import khaan from "../assets/logos/khaan.png";
 
 const HeroSwipeImage = () => {
   function resize() {
@@ -24,18 +18,19 @@ const HeroSwipeImage = () => {
     }
   }
   const logos = [
-    ard,
+    // ard,
     amar,
     bodi,
-    ganzam,
+    // ganzam,
     mandal,
-    mig,
-    monre,
-    munkh,
-    nomin,
+    mongol,
+    khaan,
+    // mig,
+    // monre,
+    // munkh,
+    // nomin,
     practical,
-    tenger,
-    ulaanbaatar,
+    // ulaanbaatar,
   ];
 
   SwiperCore.use([Autoplay]);

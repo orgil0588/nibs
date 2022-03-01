@@ -4,8 +4,8 @@ import SwiperCore, { Autoplay, EffectFade } from "swiper";
 
 import Container from "../Components/Container";
 import Tushig from "../assets/tushig.png";
-import Urangoo from "../assets/badmaa.png";
-import Badmaa from "../assets/urangoo.png";
+// import Urangoo from "../assets/badmaa.png";
+// import Badmaa from "../assets/urangoo.png";
 
 function About() {
 
@@ -15,14 +15,14 @@ function About() {
       images: Tushig,
       text: "Түшиг",
     },
-    {
-      images: Urangoo,
-      text: "Урангоо",
-    },
-    {
-      images: Badmaa,
-      text: "Бадамсүрэн",
-    },
+    // {
+    //   images: Urangoo,
+    //   text: "Урангоо",
+    // },
+    // {
+    //   images: Badmaa,
+    //   text: "Бадамсүрэн",
+    // },
   ];
   SwiperCore.use([Autoplay]);
   return (

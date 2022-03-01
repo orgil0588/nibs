@@ -17,7 +17,7 @@ function Statistic() {
     }
   }
 
-  console.log(index);
+
   return (
     <div>
       <Container>

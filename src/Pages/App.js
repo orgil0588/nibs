@@ -6,6 +6,7 @@ import Title from "../Components/Title";
 import Button from "../Components/Button";
 import HeroSwipeImage from "../Components/HeroSwipeImage";
 import FeatureItems from "../Components/FeatureItems";
+import MyComponentMap from "../Components/Map";
 // import data from "../fakejson/news.json";
 // import NewsItems from "../Components/NewsItems";
 import Faqs from "../Components/Faqs";
@@ -20,7 +21,6 @@ function App() {
   //   newsArr.push(data[i]);
   // }
 
-  // console.log(fnc);
   return (
     <div>
       <Container>
@@ -54,9 +54,8 @@ function App() {
 
           <img
             className="mx-auto w-10/12 md:max-w-lg  lg:w-full"
-            src={HeroImgXs}
+            src={HeroImgLg}
             alt="images"
-            srcSet={`${HeroImgXs} 300w, ${HeroImgMd} 642w, ${HeroImgLg} 1280w `}
           />
         </main>
         <div className="my-20 md:my-32 lg:my-40">
@@ -193,6 +192,7 @@ function App() {
           "
         />
         <Title text="Холбоо барих" color="blue-500" />
+        <MyComponentMap isMarkerShown={true} />
         <ContactInfo />
         {/* <ContactForm /> */}
       </Container>
