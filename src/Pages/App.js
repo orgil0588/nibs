@@ -1,26 +1,18 @@
 import Container from "../Components/Container";
-import HeroImgXs from "../assets/Hero-xs.png";
-import HeroImgMd from "../assets/hero-md.png";
+// import HeroImgXs from "../assets/Hero-xs.png";
+// import HeroImgMd from "../assets/hero-md.png";
 import HeroImgLg from "../assets/hero-lg.png";
 import Title from "../Components/Title";
 import Button from "../Components/Button";
 import HeroSwipeImage from "../Components/HeroSwipeImage";
 import FeatureItems from "../Components/FeatureItems";
-import MyComponentMap from "../Components/Map";
+import Maps from "../Components/Maps/Map"
 // import data from "../fakejson/news.json";
 // import NewsItems from "../Components/NewsItems";
 import Faqs from "../Components/Faqs";
 import ContactInfo from "../Components/ContactInfo";
 // import ContactForm from "../Components/ContactForm";
 function App() {
-  // function fnc() {
-  //   console.log("propsoor damjsan function");
-  // }
-  // let newsArr = [];
-  // for (let i = 0; i < 6; i++) {
-  //   newsArr.push(data[i]);
-  // }
-
   return (
     <div>
       <Container>
@@ -192,7 +184,7 @@ function App() {
           "
         />
         <Title text="Холбоо барих" color="blue-500" />
-        <MyComponentMap isMarkerShown={true} />
+        <Maps />
         <ContactInfo />
         {/* <ContactForm /> */}
       </Container>

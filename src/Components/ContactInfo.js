@@ -3,7 +3,7 @@ import Facebook from "../assets/fb.png";
 import Mail from "../assets/mail.png";
 import Phone from "../assets/phone.png";
 import Location from "../assets/location.png";
-import MyMapComponent from "./Map";
+
 
 function ContactInfo() {
   return (

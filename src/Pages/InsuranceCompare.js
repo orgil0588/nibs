@@ -6,9 +6,11 @@ function InsuranceCompare() {
   const [showComp, setShowComp] = useState(0);
 
   return (
-    <div>
-
+    <div className="h-screen">
       <Container>
+        <div className="mt-4  text-gray-400">
+          Даатгалын компаниудын санхүүгийн үзүүлэлт (2020 он)
+        </div>
         <div className="flex justify-between my-12  ">
           <button
             className={`py-2 px-4 rounded-lg ${

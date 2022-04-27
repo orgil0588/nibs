@@ -50,7 +50,7 @@ function OnlineInsurance() {
   };
 
   return (
-    <div>
+    <div className="h-screen">
       <Container>
         {error && <div className="mx-4 text-red-400">{error}</div>}
         {checkInsurace !== "" ? (

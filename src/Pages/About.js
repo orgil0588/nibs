@@ -4,8 +4,8 @@ import SwiperCore, { Autoplay, EffectFade } from "swiper";
 
 import Container from "../Components/Container";
 import Tushig from "../assets/tushig.png";
-// import Urangoo from "../assets/badmaa.png";
-// import Badmaa from "../assets/urangoo.png";
+import Urangoo from "../assets/badmaa.png";
+import Badmaa from "../assets/urangoo.png";
 
 function About() {
 
@@ -13,20 +13,20 @@ function About() {
   const avatars = [
     {
       images: Tushig,
-      text: "Түшиг",
+      text: "Б.Түшиг",
     },
-    // {
-    //   images: Urangoo,
-    //   text: "Урангоо",
-    // },
-    // {
-    //   images: Badmaa,
-    //   text: "Бадамсүрэн",
-    // },
+    {
+      images: Urangoo,
+      text: "О.Урангоо",
+    },
+    {
+      images: Badmaa,
+      text: "Б.Бадамсүрэн",
+    },
   ];
   SwiperCore.use([Autoplay]);
   return (
-    <div>
+    <div className="h-screen">
    
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 ">

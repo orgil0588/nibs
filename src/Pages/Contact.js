@@ -3,11 +3,11 @@ import Facebook from "../assets/fb.png";
 import Mail from "../assets/mail.png";
 import Phone from "../assets/phone.png";
 import Location from "../assets/location.png";
-import MyComponentMap from "../Components/Map";
+import Maps from "../Components/Maps/Map";
 function Contact() {
   return (
-    <div>
-      <MyComponentMap isMarkerShown={true} />
+    <div className="h-screen">
+      <Maps />
       <div className=" my-10 flex flex-col md:w-8/12 mx-auto   justify-around text-white md:flex-row">
         <div className="md:w-6/12">
           <div className="flex items-center mt-4">

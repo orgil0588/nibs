@@ -21,6 +21,7 @@ function Statistic() {
   return (
     <div>
       <Container>
+
         <div className="text-white">
           <Swiper
             modules={[EffectFade]}
@@ -31,6 +32,7 @@ function Statistic() {
             centeredSlidesBounds={true}
             pagination={{ clickable: true }}
           >
+           
             {data.map((e, i) => {
               return (
                 <SwiperSlide>
